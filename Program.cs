@@ -1,7 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 LinqQueries queries = new LinqQueries();
 
-ImprimirValores(queries.TodaLaColeccion());
+//Toda la colección
+// ImprimirValores(queries.TodaLaColeccion());
+
+//Libros después del 2000.
+// ImprimirValores(queries.LibrosDespuesDel200());
+
+//Libros con más de 250 páginas y con "in action" en título
+ImprimirValores(queries.LibrosMas250PagTituloInAction());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
