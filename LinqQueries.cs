@@ -74,4 +74,14 @@ public class LinqQueries
         .Take(3)
         .Select(p=> new Book() { Title = p.Title, PageCount = p.PageCount});
     }
+
+    public long LibrosConPaginasEntre200Y500()
+    {
+        //Mala práctica con oportunidad de refactorizar
+        // return librosCollection.Where(p=> p.PageCount >= 200 && p.PageCount <= 500).LongCount();
+
+        //Dado que count y long count, pemriten evaluar condiciones, se elimina el operador Where
+        //Con el fin de no realizar dos operaciones sobre la colección.
+        return librosCollection.LongCount(p=> p.PageCount >= 200 && p.PageCount <= 500);
+    }
 }

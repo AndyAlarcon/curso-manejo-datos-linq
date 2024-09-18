@@ -32,8 +32,10 @@ LinqQueries queries = new LinqQueries();
 // ImprimirValores(queries.TercerYCuartoLibroConMasDe400Paginas());
 
 //Top 3 libros con propiedades título y número de páginas
+// ImprimirValores(queries.Top3LibrosConTituloYNumeroDePaginas());
 
-ImprimirValores(queries.Top3LibrosConTituloYNumeroDePaginas());
+//Libros con número de páginas entre 200 y 500
+Console.WriteLine($"El total de libros con número de páginas entre 200 y 500 es: {queries.LibrosConPaginasEntre200Y500()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
