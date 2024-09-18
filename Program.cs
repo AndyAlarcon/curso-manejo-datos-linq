@@ -23,7 +23,13 @@ LinqQueries queries = new LinqQueries();
 // ImprimirValores(queries.LibrosDeJavaOrdenAscendente());
 
 //Libros con más de 450 páginas, ordenados de forma descendente por número de páginas.
-ImprimirValores(queries.LibrosConMasDe450PaginasOrdenDescendente());
+// ImprimirValores(queries.LibrosConMasDe450PaginasOrdenDescendente());
+
+//Top 3 Libros de Java por fecha de publicación.
+// ImprimirValores(queries.Top3LibrosJavaPorFechaDePublicacion());
+
+//Tercer y cuarto libro con más de 400 páginas.
+ImprimirValores(queries.TercerYCuartoLibroConMasDe400Paginas());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
