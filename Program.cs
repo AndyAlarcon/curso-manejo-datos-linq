@@ -17,7 +17,13 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Hay libros publicados en 2005? - {queries.HayLibrosPublicadosEn2005()}");
 
 //Libros de Python.
-ImprimirValores(queries.LibrosDePython());
+// ImprimirValores(queries.LibrosDePython());
+
+//Libros de Java, ordenados de manera ascendente por título.
+// ImprimirValores(queries.LibrosDeJavaOrdenAscendente());
+
+//Libros con más de 450 páginas, ordenados de forma descendente por número de páginas.
+ImprimirValores(queries.LibrosConMasDe450PaginasOrdenDescendente());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
