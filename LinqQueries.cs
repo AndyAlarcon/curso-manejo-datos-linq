@@ -1,3 +1,5 @@
+using System.Reflection.Metadata;
+
 public class LinqQueries
 {
     private List<Book> librosCollection;
@@ -31,5 +33,13 @@ public class LinqQueries
 
         //Query expresion
         // return from l in librosCollection where l.PageCount > 250 && l.Title.Contains("in Action") select l;
+    }
+    public bool TodosLibrosTienenStatus()
+    {
+        return librosCollection.All(p => p.Status != string.Empty);
+    }
+    public bool HayLibrosPublicadosEn2005()
+    {
+        return librosCollection.Any(p=> p.PublishedDate.Year == 2005);
     }
 }
