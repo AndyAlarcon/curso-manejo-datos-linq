@@ -41,7 +41,21 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"La fecha {queries.LibroMasAntiguoPublicado()} corresponde al libro más antiguo publicado.");
 
 //Libro más extenso publicado
-Console.WriteLine($"El libro más extenso tiene {queries.LibroMasExtensoPublicado()} páginas");
+// Console.WriteLine($"El libro más extenso tiene {queries.LibroMasExtensoPublicado()} páginas");
+
+//Libro más corto
+// var libroMasCorto = queries.LibroMasCorto();
+// Console.WriteLine($"El libro {libroMasCorto.Title} es el más corto con {libroMasCorto.PageCount} páginas");
+
+//Libro más reciente
+// var libroMasReciente = queries.LibroMasRecientePublicado();
+// Console.WriteLine($"El libro {libroMasReciente.Title} es el más reciente con fecha {libroMasReciente.PublishedDate} de publicación");
+
+//Total de páginas de libros entre 0 y 500 páginas
+// Console.WriteLine($"{queries.TotalPaginasLibrosHasta500Paginas()} es el total de páginas de libros entre 0 y 500 páginas");
+
+//Libros publicados después del 2015
+Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concatenados());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

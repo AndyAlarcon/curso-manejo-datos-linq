@@ -92,4 +92,32 @@ public class LinqQueries
     {
         return librosCollection.Max(p=> p.PageCount);
     }
+    public Book LibroMasCorto()
+    {
+        return librosCollection.Where(p=> p.PageCount > 0).MinBy(p=> p.PageCount);
+    }
+    public Book LibroMasRecientePublicado()
+    {
+        return librosCollection.MaxBy(p=> p.PublishedDate);
+    }
+    public int TotalPaginasLibrosHasta500Paginas()
+    {
+        return librosCollection
+        .Where(p=> p.PageCount >= 0 && p.PageCount <= 500)
+        .Sum(p=> p.PageCount);
+    }
+    public string TitulosLibrosDespuesDel2015Concatenados()
+    {
+        return librosCollection
+        .Where(p=> p.PublishedDate.Year > 2015)
+        .Aggregate("", (TitulosLibros, next) =>
+        {
+            if(TitulosLibros != string.Empty)
+                TitulosLibros += " - " + next.Title;
+            else    
+                TitulosLibros += next.Title;
+
+            return TitulosLibros;
+        });
+    }
 }
