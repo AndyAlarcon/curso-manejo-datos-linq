@@ -84,4 +84,12 @@ public class LinqQueries
         //Con el fin de no realizar dos operaciones sobre la colección.
         return librosCollection.LongCount(p=> p.PageCount >= 200 && p.PageCount <= 500);
     }
+    public DateTime LibroMasAntiguoPublicado()
+    {
+        return librosCollection.Min(p=> p.PublishedDate);
+    }
+    public int LibroMasExtensoPublicado()
+    {
+        return librosCollection.Max(p=> p.PageCount);
+    }
 }
