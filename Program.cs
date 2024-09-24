@@ -55,7 +55,13 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"{queries.TotalPaginasLibrosHasta500Paginas()} es el total de páginas de libros entre 0 y 500 páginas");
 
 //Libros publicados después del 2015
-Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concatenados());
+// Console.WriteLine(queries.TitulosLibrosDespuesDel2015Concatenados());
+
+//Promedio de carácteres de los títulos de los libros
+// Console.WriteLine($"Promedio de carácteres de los títulos de los libros: {queries.PromedioCaracteresTitulo()}");
+
+//Promedio de páginas de los libros
+Console.WriteLine($"Promedio de páginas de los libros: {queries.PromedioPaginasLibros()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
