@@ -67,8 +67,12 @@ LinqQueries queries = new LinqQueries();
 // ImprimirValoresAgrupados(queries.LibrosDespuesDel200AgrupadosAno());
 
 //Diccionario de libros agrupados por primera letra del título
-var diccionarioLookUp = queries.BuscarLibrosPorInicial();
-ImprimirValoresDiccionario(diccionarioLookUp, 'A');
+// var diccionarioLookUp = queries.BuscarLibrosPorInicial();
+// ImprimirValoresDiccionario(diccionarioLookUp, 'A');
+
+//Libros filtrados por cláusula Join
+
+ImprimirValores(queries.LibrosDespuesDel2005ConMasDe500Paginas());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
