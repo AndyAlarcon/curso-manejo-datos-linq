@@ -128,4 +128,8 @@ public class LinqQueries
     {
         return librosCollection.Where(p=> p.PageCount > 0).Average(p=> p.PageCount);
     }
+    public IEnumerable<IGrouping<int, Book>> LibrosDespuesDel200AgrupadosAno()
+    {
+        return librosCollection.Where(p=> p.PublishedDate.Year >= 2000).GroupBy(p=> p.PublishedDate.Year);
+    }
 }

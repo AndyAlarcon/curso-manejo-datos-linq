@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("curso-manejo-datos-linq")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fed9ca192d6c0b30e4c52a44143ea0294ff3f57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38c144a633e1d4548c04fcbff90d0dbc7a555e6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("curso-manejo-datos-linq")]
 [assembly: System.Reflection.AssemblyTitleAttribute("curso-manejo-datos-linq")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
