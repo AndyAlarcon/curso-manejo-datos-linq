@@ -64,8 +64,11 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Promedio de páginas de los libros: {queries.PromedioPaginasLibros()}");
 
 //Libros publicados a partir del 2000 agrupados ppor año
-ImprimirValoresAgrupados(queries.LibrosDespuesDel200AgrupadosAno());
+// ImprimirValoresAgrupados(queries.LibrosDespuesDel200AgrupadosAno());
 
+//Diccionario de libros agrupados por primera letra del título
+var diccionarioLookUp = queries.BuscarLibrosPorInicial();
+ImprimirValoresDiccionario(diccionarioLookUp, 'A');
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
@@ -87,5 +90,14 @@ void ImprimirValoresAgrupados(IEnumerable<IGrouping<int, Book>> ListaLibros)
         {
             Console.WriteLine("{0,-60} {1,15} {2,15}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
         }
+    }
+}
+
+void ImprimirValoresDiccionario(ILookup<char, Book> listaLibros, char letra)
+{
+    Console.WriteLine("{0,-60} {1,15} {2,15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+    foreach(var item in listaLibros[letra])
+    {
+         Console.WriteLine("{0,-60} {1,15} {2,15}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
     }
 }
